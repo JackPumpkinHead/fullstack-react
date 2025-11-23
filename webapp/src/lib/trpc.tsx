@@ -12,16 +12,16 @@ const queryClient = new QueryClient({
 
             // Выключить перезапрашивание данных при возвращении к вкладке браузера
             refetchOnWindowFocus: false,
-        }
-    }
+        },
+    },
 });
 
 const trpcClient = trpc.createClient({
     links: [
         httpBatchLink({
             url: "http://localhost:3000/trpc",
-        })
-    ]
+        }),
+    ],
 });
 
 export const TrpcProvider = ({ children }: { children: React.ReactNode }) => {
@@ -29,5 +29,5 @@ export const TrpcProvider = ({ children }: { children: React.ReactNode }) => {
         <trpc.Provider client={trpcClient} queryClient={queryClient}>
             <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
         </trpc.Provider>
-    )
-}
+    );
+};
