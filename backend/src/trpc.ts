@@ -10,6 +10,8 @@ const ideas = [
 
 const trpc = initTRPC.create();
 
+const x: string = "hello";
+if (Math.random()) console.info(x);
 export const trpcRouter = trpc.router({
     getIdeas: trpc.procedure.query(() => {
         return { ideas };
