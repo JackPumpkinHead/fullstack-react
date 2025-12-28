@@ -7,7 +7,11 @@
         "build": "rimraf ./dist && tsc --build ./tsconfig.json",
         "start": "node ./dist/index.js",
         "types": "tsc --noEmit --project ./tsconfig.json",
-        "prettify": "prettier --log-level warn --cache --write {src/**/*,*}.{ts,tsx,js,json,yml,scss} !**/{node_modules,dist}/**/*"
+        "prettify": "prettier --log-level warn --cache --write {src/**/*,*}.{ts,tsx,js,json,yml,scss} !**/{node_modules,dist}/**/*",
+        "lint:js": "eslint .",
+        "lint:js:fix": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts . --fix",
+        "format": "prettier . --write",
+        "lint:fix": "concurrently \"pnpm run lint:js:fix\" \"pnpm run format\""
     },
     "dependencies": {
         "@trpc/server": "10.37.1",
