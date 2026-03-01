@@ -12,6 +12,7 @@
         "lint:js": "eslint .",
         "lint:js:fix": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts,.tsx . --fix",
         "stylelint": "stylelint --cache --cache-location ./node_modules/.cache/.stylelintcache \"src/**/*.scss\"",
+        "stylecheck": "sass --update -q ./src:./node_modules/.cache/.stylecheckcache",
         "format": "prettier . --write",
         "lint:fix": "concurrently \"pnpm run lint:js:fix\" \"pnpm run format\" "
     },

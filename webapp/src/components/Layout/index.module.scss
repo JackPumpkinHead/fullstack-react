@@ -6,7 +6,7 @@ $breakpoint: "<=900px";
 .layout {
     display: flex;
     flex-flow: row nowrap;
-    height: 100%;
+    height: $notexistvar;
 
     @include media($breakpoint) {
         flex-flow: column nowrap;
