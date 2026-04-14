@@ -8,10 +8,10 @@ export default {
         "scss/at-mixin-pattern": [
             "^[a-z][a-zA-Z0-9]+$",
             {
-                "message": "Expected mixin to be camelCase"
-            }
+                message: "Expected mixin to be camelCase",
+            },
         ],
-        "selector-pseudo-element-colon-notation": 'single',
+        "selector-pseudo-element-colon-notation": "single",
         "scss/dollar-variable-empty-line-before": null,
         "block-no-empty": null,
         "declaration-empty-line-before": null,
@@ -23,6 +23,6 @@ export default {
         "shorthand-property-no-redundant-values": null,
         "color-hex-length": null,
         "no-empty-source": null,
-        "import-notation": 'string',
-    }
+        "import-notation": "string",
+    },
 };

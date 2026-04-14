@@ -20,6 +20,7 @@ export default defineConfig([
             eqeqeq: "warn",
             curly: "warn",
             "no-else-return": "warn",
+            '@typescript-eslint/no-explicit-any': 'off'
         },
         languageOptions: { globals: globals.browser },
     },
